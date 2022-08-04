@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>Daiso Dollar Checker</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <style>
+            img {
+                height: 160px;
+                float: left;
+            }
+
+            h1 {
+                color: rgb(255, 37, 139);
+                text-align: center;
+            }
+
+            p {
+                text-align: center;
+            }
+
+            form {
+                text-align: center;
+            }
+            </style>
+    </head>
+    <body>
+        <h1>DAISO DOLLAR CHECKER</h1>
+        <p>Welcome to the Daiso Dollar Checker!</p>
+        <p>It will calculate how many $1.75 items to purchase so that total cost will not require any coins.</p>
+
+        <p>Input your costs of snacks/drinks with no tax (enter 0 if none):</p>
+
+        <form action="/action_page.php">
+            <label for="snx">Snacks: $</label>
+            <input type="text" id="snx" name="snx"><br>
+
+            <label for="ndrnx"># of Drinks: </label>
+            <input type="text" id="ndrnx" name="ndrnx"><br>
+
+            <label for="drnx">Drinks: $</label>
+            <input type="text" id="drnx" name="drnx"><br>
+
+            <button type="button" onclick="calc(document.getElementById('snx').value, document.getElementById('ndrnx').value, document.getElementById('drnx').value)">Calculate</button>
+        </form>
+
+        <h1 id="output">0 items for $0</h1>
+
+        <script src="index.js"></script>
+    </body>
+</html>
